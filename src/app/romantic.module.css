@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+.page {
+  background: linear-gradient(135deg, #ff1744 0%, #ff8a80 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #b71c1c;
+}
+
+.romanticTitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeInTitle 2s ease-in forwards;
+}
+
+@keyframes fadeInTitle {
+  to {
+    opacity: 1;
+  }
+}
+
+.romanticQuote {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 32px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 2px 16px 0 rgba(215,38,96,0.08);
+}
+
+.cardsSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(215,38,96,0.12);
+  overflow: hidden;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+.cardImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.cardCaption {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2rem;
+  color: #d72660;
+  padding: 12px 0 16px 0;
+  text-align: center;
+}
+
+.musicPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 32px auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 32px;
+  box-shadow: 0 2px 12px 0 rgba(215,38,96,0.08);
+  padding: 8px 24px;
+  width: fit-content;
+}
+.musicPlayer button {
+  background: #d72660;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(215,38,96,0.12);
+  transition: background 0.2s;
+}
+.musicPlayer button:hover {
+  background: #ad1457;
+}
+
+.floatingHearts {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  overflow: hidden;
+}
+.heart {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+  animation: floatHeart 6s linear infinite;
+}
+@keyframes floatHeart {
+  0% {
+    transform: translateY(100vh) scale(0.8) rotate(-10deg);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.carouselImageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(215,38,96,0.12);
+  padding: 8px 16px 0 16px;
+  min-width: 220px;
+}
+.carouselBtn {
+  background: #d72660;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(215,38,96,0.12);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carouselBtn:hover {
+  background: #ad1457;
+}
+
+.loveSection, .loveSectionReverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 40px 0;
+}
+.loveSectionReverse {
+  flex-direction: row-reverse;
+}
+.loveImgBox {
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(215,38,96,0.12);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loveImg {
+  border-radius: 16px;
+  object-fit: cover;
+}
+.loveTextBox {
+  max-width: 340px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 rgba(215,38,96,0.08);
+  padding: 24px 28px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  color: #b71c1c;
+}
+.loveText {
+  margin: 0;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .romanticTitle {
+    font-size: 2rem;
+  }
+  .cardsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .carouselImageBox {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 0;
+  }
+  .cardImage {
+    width: 90vw !important;
+    max-width: 98vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 18px;
+  }
+  .loveSection, .loveSectionReverse {
+    flex-direction: column !important;
+    gap: 16px;
+    align-items: center;
+  }
+  .loveImgBox {
+    width: 90vw;
+    max-width: 98vw;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .loveImg {
+    width: 90vw !important;
+    max-width: 98vw !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 18px;
+  }
+  .loveTextBox {
+    max-width: 95vw;
+    padding: 18px 8vw;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 900px) {
+  .loveSection, .loveSectionReverse {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+  .loveTextBox {
+    max-width: 95vw;
+    padding: 18px 8vw;
+    font-size: 1.1rem;
+  }
+}
