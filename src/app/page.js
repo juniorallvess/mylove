@@ -4,9 +4,9 @@ import styles from "./romantic.module.css";
 import { useRef, useState } from "react";
 
 const images = [
-  { src: "/1.jpeg", caption: "Nosso primeiro encontro" },
-  { src: "/2.jpeg", caption: "Nossa viagem juntos" },
-  { src: "/3.jpeg", caption: "Momentos especiais" },
+  { src: "/1.jpeg", caption: "Nossos passeios" },
+  { src: "/2.jpeg", caption: "Nossas idas a praia juntos" },
+  { src: "/3.jpeg", caption: "Momentos especiais com você são incrivéis!" },
 ];
 
 const romanticQuotes = [
@@ -43,7 +43,7 @@ function FloatingHearts() {
 function MusicPlayer() {
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
-  const musicUrl = "https://cdn.pixabay.com/audio/2023/02/14/audio_12b6b7b7e2.mp3"; // Música romântica livre
+  const musicUrl = "/TIAGO IORC - Coisa Linda.mp3"; // Música local na pasta public
 
   const togglePlay = () => {
     if (!audioRef.current) return;
@@ -116,20 +116,20 @@ export default function Home() {
       <Carousel />
       <LoveSection
         imgSrc="/sec1.jpeg"
-        imgAlt="Primeiro encontro"
-        text="Nosso primeiro encontro foi mágico e mudou minha vida para sempre."
+        imgAlt="Primeiros filmes juntos"
+        text="Nossos Primeiros filmes e doramas juntos, eu amo estar com você meu amooor!."
         reverse={false}
       />
       <LoveSection
         imgSrc="/sec2.jpeg"
-        imgAlt="Viagem juntos"
-        text="Nossa viagem juntos foi cheia de aventuras, risos e muito amor."
+        imgAlt="Minha Mega-Sena"
+        text="Posso dizer que sou um Homem de sorte quando te encontrei, e cada dia que passa meu amor por você se torna algo mais sólido, forte e que me trás segurança.."
         reverse={true}
       />
       <LoveSection
         imgSrc="/sec3.jpeg"
-        imgAlt="Momentos especiais"
-        text="Cada momento ao seu lado é especial e inesquecível. Te amo!"
+        imgAlt="Minha princesa, Minha flor!"
+        text="Amo lhe presentear com as suas flores preferidas, amo estar contigo e amo viver com você! És uma mulher incrivé que admiro muito por sua dedicaçao, empenho e inteligência, você tem a delicadeza de um girasol no namis belo dia mas também tem a beleza força de uma onça kk obrigado por tudo meu amor! . Te amo!"
         reverse={false}
       />
       <div className={styles.romanticQuote}>{romanticQuotes[1]}</div>
