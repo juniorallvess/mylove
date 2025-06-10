@@ -123,7 +123,7 @@ export default function Home() {
       <LoveSection
         imgSrc="/sec2.jpeg"
         imgAlt="Minha Mega-Sena"
-        text="Posso dizer que sou um Homem de sorte quando te encontrei, e cada dia que passa meu amor por você se torna algo mais sólido, forte e que me trás segurança.."
+        text="Posso dizer que sou um Homem de sorte quando te encontrei, e cada dia que passa meu amor por você se torna algo mais sólido, forte e que me trás segurança. Sou grato a Deus por ter você ao meu lado, por ser minha companheira, minha amiga e minha namorada. Você é a minha Mega-Sena Te amo!"
         reverse={true}
       />
       <LoveSection
